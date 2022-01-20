@@ -1,5 +1,7 @@
 # api-car-rentalx
 
+Application using TypeScript following code standards and SOLID principles. Repositories, models, Node.js streams and APIs documentation with Swagger
+
 ```
 
 ### dependencies 
