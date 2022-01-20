@@ -36,3 +36,6 @@ define PORT in .env
 ### Documentation Swagger
 ...
 http://localhost:8989/api-docs/
+
+![image](https://user-images.githubusercontent.com/23345809/150346590-eb29a3aa-0189-4bae-afeb-7eb963a636ca.png)
+
