@@ -1,12 +1,12 @@
-import { request, response, Router } from 'express'
-import { createSpecificationController } from "../modules/cars/UseCases/createSpecification"
-
+import { Router } from 'express'
+import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
+import { CreateSpecificationController } from "../modules/cars/UseCases/createSpecification/CreateSpecificationController"
 
 const specificationsRoutes = Router();
 
+const createSpecificationController = new CreateSpecificationController();
 
-specificationsRoutes.post("/", (request, response) => {
-    return createSpecificationController.handle(request,response);
-})
+specificationsRoutes.use(ensureAuthenticated);
+specificationsRoutes.post("/", createSpecificationController.handle);
 
-export { specificationsRoutes } 
+export { specificationsRoutes }
